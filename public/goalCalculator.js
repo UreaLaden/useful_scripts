@@ -1,8 +1,9 @@
 //User inputs desired day, month and year of completion
 //getCurrentDate calculates and parses the current date and time of the user's device
 //convertToJulian converts both current and goal dates to julian
-//get calculateRemainingDays returns their difference
 
+//get calculateRemainingDays returns their difference
+console.log("Connected!");
 //Checks if input year is a leap year
 const isLeapYear = year => {
     //If a year is not divisible by 4: common year
@@ -71,7 +72,6 @@ const isLeapYear = year => {
       return isLeapYear(year) ? initialDay + day : initialDay + (day - 1);
   }
   
-  
   const getCurrentDate = () =>{
     let timeStamp = new Date();
     let day = timeStamp.getDate();
@@ -137,7 +137,13 @@ const isLeapYear = year => {
   let gMonth = 6;
   let gYear = 2021;
   
-  
-  console.log(calculateRemainingDays(gMonth,gDay,gYear));
-  
-  
+  function remainingDays(){
+    let field = document.querySelector('#date');
+    let dateArr = field.value.split('-');
+    let year = Number(dateArr[0]);
+    let month = dateArr[1].length < 2 ? '0' + dateArr[1]:dateArr[1];
+    let day = Number(dateArr[2]);
+    field.value = `${year}-${month}-${day}`;
+    console.log(calculateRemainingDays(Number(month),day,year));
+    return field.value;
+  }
