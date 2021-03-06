@@ -1,7 +1,7 @@
 //User inputs desired day, month and year of completion
 //getCurrentDate calculates and parses the current date and time of the user's device
 //convertToJulian converts both current and goal dates to julian
-//get calculateRemainingDays returns their difference
+//calculateRemainingDays returns their difference
 
 //Checks if input year is a leap year
 const isLeapYear = year => {
