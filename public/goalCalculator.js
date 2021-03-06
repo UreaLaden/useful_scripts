@@ -1,10 +1,6 @@
 //User inputs desired day, month and year of completion
 //getCurrentDate calculates and parses the current date and time of the user's device
 //convertToJulian converts both current and goal dates to julian
-<<<<<<< HEAD:public/goalCalculator.js
-=======
-//calculateRemainingDays returns their difference
->>>>>>> afc892a1c036f46ab6c47e6e55c9146444338321:goalCalculator.js
 
 //get calculateRemainingDays returns their difference
 console.log("Connected!");
@@ -141,7 +137,6 @@ const isLeapYear = year => {
   let gMonth = 6;
   let gYear = 2021;
   
-<<<<<<< HEAD:public/goalCalculator.js
   function remainingDays(){
     let field = document.querySelector('#date');
     let dateArr = field.value.split('-');
@@ -149,12 +144,8 @@ const isLeapYear = year => {
     let month = dateArr[1].length < 2 ? '0' + dateArr[1]:dateArr[1];
     let day = Number(dateArr[2]);
     field.value = `${year}-${month}-${day}`;
-    console.log(calculateRemainingDays(Number(month),day,year));
-    return field.value;
+    let remainingDayText = calculateRemainingDays(Number(month),day,year);
+    document.getElementById('output').innerText = remainingDayText;
+    document.querySelector('#setDate').hidden =true;
+    document.getElementById('output').hidden = false;
   }
-=======
-  
-  console.log(calculateRemainingDays(gMonth,gDay,gYear));
-  
-  
->>>>>>> afc892a1c036f46ab6c47e6e55c9146444338321:goalCalculator.js

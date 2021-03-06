@@ -9,11 +9,14 @@
 </head>
 <body>
     <form action='/dateChange' method = 'POST'>
-        <label>
+        <label id ="setDate">
             Enter your desired completion date:
             <input id="date" onchange="remainingDays()" type="date"  min="2021-01-01" max="2031-12-31">
+            <p><button onclick="">Submit</button></p>
         </label>
-        <!-- <p><button onclick="">Submit</button></p> -->
+        <label id="outputDate" >
+            <p id='output' ></p>
+        </label>
     </form>
 </body>
 </html>
